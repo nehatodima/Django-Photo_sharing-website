@@ -1,0 +1,25 @@
+{% extends "neh.html" %}
+
+{% block head_title %}
+home
+{% endblock %}
+  {% block content%}
+  
+  {% if user.is_authenticated %}
+  <p>Welcome {{ user.get_username }}</p>
+  <p> Click To Add Your Post</p>
+    <form method="" action="/create/"> {% csrf_token %}
+		{{ form.as_p }}
+    	<button type="Add" class="btn btn-secondary">Add Post</button>
+    </form>
+    <h1>Your posts:</h1>
+{% for post in object_list %}
+
+{% include 'postinline.html' with post=post %}
+{% endfor %}
+
+    {% else %}
+    <p>Please Create account or login to add your posts.</p>
+    {% endif %}
+ 
+    {% endblock %}

@@ -1,0 +1,13 @@
+<div class="card" style="width: 60rem;">
+ 
+  <div class="card-body">
+  	{% if post.image %}
+  	 <a href="/blog/{{post.slug}}">
+  	 <img src="{{ post.image.url }}" class="card-img-top" alt="...">
+  	</a>
+  	 {% endif %}
+    <h5 class="card-title">{{ post.title }}</h5>
+    <p class="card-text">{{ post.content }}</p>
+    <a href="/home/{{post.slug}}" class="btn btn-secondary">View post</a>
+  </div>
+</div>

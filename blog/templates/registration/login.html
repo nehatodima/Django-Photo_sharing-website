@@ -1,0 +1,8 @@
+{% extends "registration/register.html" %}
+{% block content%}
+<form action='' method="POST">{% csrf_token %}
+		{{ form.as_p }}
+		<button type="">Login</button>
+		
+	</form>
+{% endblock %}

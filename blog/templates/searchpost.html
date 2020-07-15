@@ -1,0 +1,15 @@
+
+
+{% extends "neh.html" %}
+
+{% block head_title %}
+searchlist
+{% endblock %}
+  {% block content%}
+    <h1>Search Results</h1>
+    <p>for  {{ query }}</p>
+    {% for post in postlist %}
+    {% include 'postinline.html' with post=post %}
+    {% endfor %}
+    {% endblock %}
+

@@ -1,0 +1,15 @@
+{% extends "neh.html" %}
+
+{% block head_title %}
+blogposts
+{% endblock %}
+{% block content%}
+<h1>blog posts are</h1>
+{% for post in object_list %}
+
+{% include 'blogpostviewinline.html' with post=post %}
+{% endfor %}
+{% endblock %}
+
+
+	

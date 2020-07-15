@@ -1,0 +1,23 @@
+{% extends "neh.html" %}
+
+{% block head_title %}
+blogpostdetail
+{% endblock %}
+  {% block content%}
+
+
+<div class="card" style="width: 60rem;">
+  <div class="card-body">
+  	 <img src="{{ object.image.url }}" class="card-img-top" alt="...">
+    <h5 class="card-title">{{ object.title }}</h5>
+    <p class="card-text">{{ object.content }}</p>
+  <a href="/update/{{object.slug}}"  class="btn btn-secondary">Edit</a>
+<a href="/delete/{{object.slug}}"  class="btn btn-secondary">Delete</a>
+  </div>
+</div>
+
+
+
+    {% endblock %}
+
+	
